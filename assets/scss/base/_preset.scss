@@ -76,6 +76,9 @@
                 input[type=text], select{
                     height: 80px;
                     font-size: 2.2rem;
+                    @include mobile{
+                        height: 88px;
+                    }
                     @include mobile2{
                         padding-left: 10px;
                     }

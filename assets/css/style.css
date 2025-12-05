@@ -159,6 +159,11 @@ input, select, textarea {
   height: 80px;
   font-size: 2.2rem;
 }
+@media (max-width: 780px) {
+  .sc-form form.mo .form-inner input[type=text], .sc-form form.mo .form-inner select {
+    height: 88px;
+  }
+}
 @media (max-width: 570px) {
   .sc-form form.mo .form-inner input[type=text], .sc-form form.mo .form-inner select {
     padding-left: 10px;
