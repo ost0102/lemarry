@@ -1,0 +1,122 @@
+@use '../../utils/mixin' as *;
+
+.event-wrap{
+    .top{
+        display: flex;
+        justify-content: space-between;
+        padding-top: 24px;
+        padding-bottom: 60px;
+        @include mobile{
+            flex-direction: column;
+            gap: 11px;
+        }
+        .ev-title{
+            font-size: 2.4rem;
+            font-weight: 600;
+            color: #444;
+            @include mobile{
+                font-size: 2.8rem;
+            }
+        }
+        .ev-date{
+            font-size: 2.4rem;
+            font-weight: 300;
+            color: #444;
+        }
+    }
+}
+
+.ev-list{
+    padding-bottom: 393px;
+    @include mobile{
+        padding-bottom: 106px;
+    }
+    &--title{
+        h2{
+            font-size: 3rem;
+            font-weight: 700;
+        }
+    }
+    .page-bar.bold{
+        margin: 40px 0;
+    }
+    &--cont{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 15px;
+        row-gap: 40px;
+        @include mobile{
+            display: flex;
+            flex-direction: column;
+        }
+        li{
+            a{
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                @include mobile{
+                    gap: 30px;
+                }
+                .ev-img{
+                    position: relative;
+                    &.ing{
+                        div{
+                            background: url("/assets/images/event-ing.png") no-repeat 0% 0%;
+                            width: 78px;
+                            height: 47px;
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                        }
+                    }
+                    &.close{
+                        div{
+                            background: url("/assets/images/event-close.png") no-repeat 0% 0%;
+                            width: 78px;
+                            height: 47px;
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                        }
+                    }    
+                    img{
+                        @include mobile{
+                            width: 100%;
+                        }
+                    }
+                }
+                .ev-list_sub{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    @include mobile{
+                        flex-direction: column;
+                        align-items: flex-start;
+                    }
+                    .ev-list--title{
+                        font-size: 1.8rem;
+                        font-weight: 600;
+                        color: #222;
+                        max-width: 60%;
+                        width: 100%;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        @include mobile{
+                            font-size: 2.8rem;
+                            max-width: 100%;
+                        }
+                    }
+                    .ev-list_date{
+                        font-size: 1.6rem;
+                        font-weight: 300;
+                        color: #444;
+                        @include mobile{
+                            font-size: 2.4rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

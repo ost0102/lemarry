@@ -1,0 +1,21 @@
+.service{
+    &-inner{
+        padding: 100px 0;
+        .service-img{
+            img{}
+        }
+        .service-btn{
+            padding-top: 80px;
+            a{
+                font-size: 2.4rem;
+                font-weight: bold;
+                padding: 15px 0;
+                background: #694100;
+                width: 400px;
+                margin: 0 auto;
+                text-align: center;
+                color: #fff;
+            }
+        }
+    }
+}

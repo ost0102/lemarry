@@ -1,0 +1,76 @@
+.cast{
+    padding-top: 100px;
+    &-inner{
+        .title{
+            text-align: center;
+            padding-bottom: 40px;
+            .gold{
+                font-weight: bold;
+                font-size: 4rem;
+                span{
+                    color: #000;
+                }
+            }
+        }
+        .cast-wrap{
+            .video-wrap{
+                position: relative;
+                height: 871px;
+                .video-cont{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 40px;
+                    position: absolute;
+                    .cast-video{
+                        width: 1200px;
+                        height: 660px;
+                        video{
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                        }
+                    }
+                    .cast-txt{
+                        .cast-title1{
+                            display: flex;
+                            align-items: center;
+                            img{}
+                            span{
+                                font-size: 2rem;
+                                &:nth-child(2){
+                                    margin-left:10px;
+                                    margin-right: 30px;
+                                    color: #000;
+                                }
+                                &:nth-child(3){
+                                    color: #666;
+                                }
+                            }
+                        }
+                        .cast-title2{
+                            padding-top: 20px;
+                            padding-bottom: 10px;
+                            font-size: 2.4rem;
+                        }
+                        .cast-title3{
+                            color: #666;
+                            font-size: 2rem;
+                        }
+                    }
+                }
+            }
+            .video-list{
+                padding-top: 40px;
+                ul{
+                    display: grid;
+                    grid-template-columns: repeat(4, 1fr);
+                    column-gap: 26px;
+                    row-gap: 40px;
+                    li{
+                        
+                    }
+                }
+            }
+        }
+    }
+}

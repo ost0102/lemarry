@@ -1,0 +1,52 @@
+@use './utils/mixin';
+
+@use './base/reset';
+@use './base/typo';
+@use './base/preset';
+@use './base/var';
+
+// @use './layout/header';
+// @use './layout/footer';
+
+@use '../scss/page/sub1/sub1_1';
+@use '../scss/page/sub1/sub1_2';
+@use '../scss/page/sub1/sub1_3';
+@use '../scss/page/sub1/sub1_4';
+@use '../scss/page/sub1/sub1_5';
+@use '../scss/page/sub1/sub1_6';
+@use '../scss/page/sub1/sub1_7';
+@use '../scss/page/sub1/sub1_8';
+
+@use '../scss/page/sub2/sub2_1';
+@use '../scss/page/sub2/sub2_2';
+@use '../scss/page/sub2/sub2_3';
+@use '../scss/page/sub2/sub2_4';
+
+@use '../scss/page/sub3/sub3_1';
+@use '../scss/page/sub3/sub3_2';
+@use '../scss/page/sub3/sub3_3';
+@use '../scss/page/sub3/sub3_4';
+@use '../scss/page/sub4/sub4_1';
+@use '../scss/page/sub4/sub4_2';
+@use '../scss/page/sub4/sub4_3';
+
+@use '../scss/page/sub5/sub5';
+@use '../scss/page/sub5/sub5_3';
+
+@use '../scss/page/sub6/sub6_1';
+@use '../scss/page/sub6/sub6_2';
+@use '../scss/page/sub6/sub6_4';
+@use '../scss/page/sub6/sub6_5';
+
+@use '../scss/page/sub7/sub7';
+
+@use '../scss/page/sub8/sub8';
+
+@use '../scss/page/sub9/sub9_1';
+@use '../scss/page/sub9/sub9_2';
+@use '../scss/page/sub9/sub9_3';
+
+@use '../scss/page/member/join';
+@use '../scss/page/member/login';
+@use '../scss/page/member/find';
+@use '../scss/page/member/recruit';

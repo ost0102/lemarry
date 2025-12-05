@@ -1,0 +1,278 @@
+@use '../../../scss/base/var' as *;
+@use '../../../scss/utils/mixin' as *;
+
+.cus_center{
+    &--inner{
+        text-align: center;
+        padding-top: 100px;
+        @include mobile{
+            padding-top: 60px;
+        }
+        h2{
+            font-size: 3.6rem;
+            font-weight: 700;
+            margin-bottom: 25px;
+            @include mobile{
+                font-size: 4rem;
+            }
+        }
+        p{
+            font-size: 1.8rem;
+            color: #444;
+        }
+        .page-bar{
+            margin-top: 40px;
+        }
+        .tab{
+            padding-top: 30px;
+            padding-bottom: 60px;
+            &-list{
+                display: flex;
+                align-items: center;
+                gap: 30px;
+                @include mobile{
+                    gap: 14px;
+                }
+                li{
+                    max-width: 380px;
+                    width: 100%;
+                    @include mobile{
+                        max-width: 224px;
+                    }
+                    button{
+                        width: 100%;
+                        height: 50px;
+                        border-radius: 50px;
+                        border: 1px solid $m-color;
+                        color: $m-color;
+                        font-size: 2rem;
+                        font-weight: 600;
+                        @include mobile{
+                            font-size: 2.8rem;
+                            height: 80px;
+                        }
+                        @include mobile2{
+                            height: 60px;
+                        }
+                        &.on{
+                            background: $m-color;
+                            color: $white;
+                        }
+                    }
+                }
+            }
+        }
+        .change-cont{
+            display: none;
+            &.on{
+                display: block;
+            }
+            .change-title{
+                height: 155px;
+                @include mobile{
+                    height: 40vh;
+                }
+                p{
+                    font-size: 1.6rem;
+                    font-weight: 300;
+                    @include mobile{
+                        font-size: 2.2rem;
+                    }
+                }
+            }
+            .page-bar{
+                margin-top: 0;
+            }
+            .center-form{
+                padding-top: 70px;
+                padding-bottom: 96px;
+                max-width: 650px;
+                width: 100%;
+                margin: 0 auto;
+                @include mobile{
+                    padding-bottom: 172px;
+                }
+                form{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 18px;
+                    input, select, textarea{
+                        border: 1px solid #bfbfbf;
+                        font-size: 1.6rem;
+                        color: #000;
+                        @include mobile{
+                            font-size: 2.4rem;
+                        }
+                        &::placeholder{
+                            font-size: 1.6rem;
+                            color: #000;
+                            @include mobile{
+                                font-size: 2.4rem;
+                            }
+                        }
+                    }
+                    select{
+                        -webkit-appearance: none;
+                        -moz-appearance: none;     
+                        appearance: none;
+                        background: url(/assets/images/icn1.png) no-repeat 93% 50%;
+                    }
+                    input, select{
+                        height: 60px;
+                        padding-left: 20px;
+                    }
+                    textarea{
+                        resize: none;
+                        width: 100%;
+                        height: 323px;
+                        padding-left: 20px;
+                        padding-top: 20px;
+                    }
+                    .input1{
+                        display: flex;
+                        gap: 14px;
+                        input, select{
+                            width: 50%;
+                        }
+                    }
+                    .input2{
+                        display: flex;
+                        align-items: center;
+                        input{
+                            width: 50%;
+                        }
+                        span{
+                            font-size: 1.6rem;
+                            margin: 0 11px;
+                        }
+                    }
+                    .input3{
+                        input{
+                            width: 100%;
+                        }
+                    }
+                    .input5{
+                        .checks_mul.sqaure {
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            position: relative;
+                            @include mobile{
+                                flex-direction: column;
+                                align-items: flex-start;
+                                gap: 10px;
+                            }
+                            > div{
+                                display: flex;
+                                align-items: center;
+                                label.bold{
+                                    font-size: 1.6rem;
+                                    font-weight: 500;
+                                    @include mobile{
+                                        font-size: 2.2rem;
+                                    }
+                                }
+                                label{
+                                    font-size: 1.2rem;
+                                    @include mobile{
+                                        font-size: 2rem;
+                                    }
+                                }
+                                span{
+                                    font-size: 1.2rem;
+                                    color: #666;
+                                    text-decoration: underline;
+                                    text-underline-position: under;
+                                    @include mobile{
+                                        font-size: 2rem;
+                                    }
+                                }
+                            }
+                            label:last-child{
+                                margin-right: 0 !important;
+                            }
+                            input[type="radio"] {
+                                position: absolute;
+                                width: 1px;
+                                height: 1px;
+                                padding: 0;
+                                margin: 0;
+                                overflow: hidden;
+                                clip: rect(0, 0, 0, 0);
+                                border: 0;
+            
+                                & + label {
+                                    display: flex;
+                                    align-items: center;
+                                    position: relative;
+                                    cursor: pointer;
+                                    -webkit-user-select: none;
+                                    -moz-user-select: none;
+                                    -ms-user-select: none;
+                                    margin-right: 20px;
+            
+                                    &::before {
+                                        content: "";
+                                        display: inline-block;
+                                        width: 20px;
+                                        height: 20px;
+                                        line-height: 20px;
+                                        margin-right: 10px;
+                                        text-align: center;
+                                        vertical-align: middle;
+                                        background: $white;
+                                        border: 1px solid #BFBFBF;
+                                        transition: background 0.3s ease, border 0.3s ease;
+                                    }
+            
+                                    &::after {
+                                        content: "";
+                                        position: absolute;
+                                        top: 5px;
+                                        left: 5px;
+                                        width: 10px;
+                                        height: 10px;
+                                        border-radius: 50%;
+                                        opacity: 0;
+                                        transition: opacity 0.2s ease;
+                                    }
+                                }
+            
+                                &:checked {
+                                    & + label {
+                                        &::before {
+                                            background: $m-color;
+                                            border-color: $m-color;
+                                        }
+            
+                                        &::after {
+                                            opacity: 1;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .input6{
+                        display: flex;
+                        justify-content: center;
+                        padding-top: 80px;
+                        @include mobile{
+                            padding-top: 60px;
+                        }
+                        a{
+                            width: 400px;
+                            height: 80px;
+                            line-height: 80px;
+                            color: $white;
+                            background: $request;
+                            text-align: center;
+                            font-size: 2rem;
+                            border-radius: 5px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

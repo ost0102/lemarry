@@ -1,0 +1,654 @@
+@use '../base/var' as *;
+@use '../utils/mixin' as *;
+
+.mo{
+    display: none !important;
+    @include mobile{
+        display: block !important;
+    }
+}
+.pc{
+    display: block !important;
+    @include mobile{
+        display: none !important;
+    }
+}
+
+.w-wrapper{
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+    @include mobile{
+        padding: 0 40px;
+    }
+}
+.header-bg{
+    .bg-inner{
+        position: relative;
+        height: 250px;
+        width: 100%;
+        h2{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+            color: #fff;
+            font-size: 4.2rem;
+            font-weight: bold;
+        }
+        img{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+.sc-form {
+    padding-top: 100px;
+    @include mobile{
+        padding-top: 80px;
+    }
+    h2 {
+        font-size: 3.6rem;
+        font-weight: 600;
+    }
+
+    span.bar {
+        display: block;
+        margin-top: 50px;
+        margin-bottom: 59px;
+        width: 100%;
+        height: 4px;
+        background: $m-color;
+    }
+
+    form {
+        &.mo{
+            .form-inner{
+                max-width: 612px;
+                padding-bottom: 66px;
+                input[type=text], select{
+                    height: 80px;
+                    font-size: 2.2rem;
+                    @include mobile2{
+                        padding-left: 10px;
+                    }
+                    &::placeholder{
+                        font-size: 2.2rem;
+                    }
+                }
+                label{
+                    font-size: 2.2rem;
+                }
+                > div{
+                    align-items: unset;
+                    margin-bottom: 12px;
+                }
+                .input1{
+                    gap: 45px;
+                    @include mobile2{
+                        gap: 25px;
+                    }
+                    .checks_mul{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        label{
+                            @include mobile2{
+                                margin: 0;
+                            }
+                        }
+                    }
+                    input{
+                        max-width: 300px;
+                        width: 100% !important;
+                        @include mobile2{
+                            max-width: 200px;
+                        }
+                    }
+                }
+                .input2, .input3{
+                    gap: 12px;
+                    select{
+                        max-width: 33.3333%;
+                        width: 100%;
+                    }
+                }
+                .input4{
+                    flex-wrap: wrap;
+                    gap: 12px;
+                    select{
+                        max-width: 159px;
+                        width: 100%;
+                    }
+                    input{
+                        max-width: 219px;
+                        width: 100%;
+                        @include mobile2{
+                            max-width: calc(100% - 171px);
+                        }
+                    }
+                    a{
+                        max-width: calc(100% - 402px);
+                        width: 100%;
+                        height: 80px;
+                        font-size: 2.8rem;
+                        margin: 0;
+                        @include mobile2{
+                            max-width: 100%;
+                        }
+                    }
+                }
+                .input5{
+                    gap: 12px;
+                    input{
+                        max-width: 390px;
+                        width: 100%;
+                        @include mobile2{
+                            max-width: 200px;
+                        }
+                    }
+                    a{
+                        max-width: calc(100% - 402px);
+                        width: 100%;
+                        height: 80px;
+                        font-size: 2.8rem;
+                        margin: 0;
+                        @include mobile2{
+                            max-width: calc(100% - 212px);
+                        }
+                    }
+                }
+                .input6{
+                    textarea{
+                        width: 100% !important;
+                        height: 266px !important;
+                        border: 1px solid #BFBFBF;
+                        font-size: 2.2rem;
+                        padding-left: 20px;
+                        padding-top: 27px;
+                        resize: none;
+                        &::placeholder{
+                            color: $black;
+                        }
+                    }
+                }
+                .input7{
+                    .checks_mul.sqaure{
+                        display: flex;
+                        flex-direction: column;
+                        gap: 10px;
+                        label.bold{
+                            font-size: 2.2rem;
+                            font-weight: 500;
+                            color: $black;
+                        }
+                        label{
+                            font-size: 2rem;
+                            color: #666;
+                        }
+                        input[type=radio]{
+                            & + label{
+                                &::before{
+                                    width: 44px;
+                                    height: 44px;
+                                    @include mobile2{
+                                        width: 25px;
+                                        height: 25px;
+                                    }
+                                }
+                            }
+                        }
+                        span{
+                            font-size: 2rem;
+                            color: #888;
+                            text-decoration: underline;
+                            text-underline-position: under;
+                        }
+                    }
+                }
+                .input8{
+                    padding-top: 60px;
+                    a{
+                        font-size: 2.8rem;
+                        font-weight: 500;
+                        padding: 27px 0;
+                        text-align: center;
+                        background: $request;
+                        color: $white;
+                        width: 100%;
+                        border-radius: 5px;
+                    }
+                }
+            }
+        }
+        .form-inner {
+            max-width: 650px;
+            width: 100%;
+            margin: 0 auto;
+            padding-bottom: 378px;
+            > div {
+                display: flex;
+                align-items: center;
+                margin-bottom: 20px;
+            }
+
+            input[type="text"], select {
+                height: 60px;
+                padding-left: 20px;
+                font-size: 1.6rem;
+                color: $black;
+                border: 1px solid #BFBFBF;
+
+                &::placeholder {
+                    font-size: 1.6rem;
+                    color: $black;
+                }
+            }
+
+            select{
+                -webkit-appearance: none;
+                -moz-appearance: none;     
+                appearance: none;
+                background: url(/assets/images/icn1.png) no-repeat 93% 50%;
+            }
+            label {
+                font-size: 1.6rem;
+                cursor: pointer;
+            }
+            .click-btn{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-left: 14px;
+                font-size: 1.6rem;
+                font-weight: 600;
+                width: 152px;
+                height: 60px;
+                background: $m-color;
+                color: $white;
+                text-shadow: 0px 3px 5px #888;
+            }
+            .checks_mul {
+                position: relative;
+                &.sqaure{
+                    input[type="radio"]{
+                        & + label {
+                            &::before {
+                                border-radius: unset;
+                            }
+                        }
+                    }
+                }
+                label:last-child{
+                    margin-right: 0 !important;
+                }
+                input[type="radio"] {
+                    position: absolute;
+                    width: 1px;
+                    height: 1px;
+                    padding: 0;
+                    margin: 0;
+                    overflow: hidden;
+                    clip: rect(0, 0, 0, 0);
+                    border: 0;
+
+                    & + label {
+                        display: inline-block;
+                        position: relative;
+                        cursor: pointer;
+                        -webkit-user-select: none;
+                        -moz-user-select: none;
+                        -ms-user-select: none;
+                        margin-right: 20px;
+
+                        &::before {
+                            content: "";
+                            display: inline-block;
+                            width: 20px;
+                            height: 20px;
+                            line-height: 20px;
+                            margin-right: 10px;
+                            text-align: center;
+                            vertical-align: middle;
+                            background: $white;
+                            border-radius: 100%;
+                            border: 1px solid #BFBFBF;
+                            transition: background 0.3s ease, border 0.3s ease;
+                        }
+
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            top: 5px;
+                            left: 5px;
+                            width: 10px;
+                            height: 10px;
+                            border-radius: 50%;
+                            opacity: 0;
+                            transition: opacity 0.2s ease;
+                        }
+                    }
+
+                    &:checked {
+                        & + label {
+                            &::before {
+                                background: $m-color;
+                                border-color: $m-color;
+                            }
+
+                            &::after {
+                                opacity: 1;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .input1, .input2 {
+                gap: 29px;
+                input[type="text"], select {
+                    width: 306px;
+                }
+            }
+            .input3{
+                select, input{
+                    width: 134px;
+                }
+                span{
+                    display: block;
+                    width: 8px;
+                    height: 2px;
+                    background: #444;
+                    margin: 15px;
+                }
+            }
+            .input4{
+                input{
+                    width: 479px;
+                }
+            }
+            .input5, .input6{
+                gap: 14px;
+                select{
+                    width: 50%;
+                }
+            }
+            .input7{
+                textarea{
+                    resize: none;
+                    width: 100%;
+                    height: 140px;
+                    border: 1px solid #BFBFBF;
+                    padding-top: 20px;
+                    padding-left: 20px;
+                    font-size: 1.6rem;
+                    color: $black;
+                    &::placeholder{
+                        color: $black;
+                    }
+                }
+            }
+            .input8{
+                .checks_mul{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    label{
+                        display: flex !important;
+                        align-items: center;
+                        font-size: 1.2rem;
+                        &.bold{
+                            font-size: 1.6rem;
+                            font-weight: 600;
+                            margin-right: 27px;
+                        }
+                        &:nth-child(4){
+                            margin-right: 10px !important;
+                        }
+                        &:nth-child(7){
+                            margin-left: 27px;
+                            margin-right: 10px !important;
+                        }
+                    }
+                    span{
+                        font-size: 1.2rem;
+                        color: #666;
+                        text-decoration: underline;
+                        text-underline-position: under;
+                    }
+                }
+            }
+            .input9{
+                padding-top: 80px;
+                justify-content: center;
+                a{
+                    font-size: 2rem;
+                    color: $white;
+                    padding: 28px 0;
+                    width: 400px;
+                    background: $request;
+                    font-weight: 500;
+                    text-align: center;
+                    border-radius: 5px;
+                }
+            }
+        }
+    }
+}
+
+.page-inner{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    padding-top: 100px;
+    &.video{
+        .page-title{
+            flex: 1;
+            @include mobile{
+                flex: unset;
+            }
+        }
+        .r-sect{
+            max-width: 640px;
+            width: 100%;
+            height: 424px;
+            flex: 1;
+            @include mobile{
+                max-width: 100%;
+                height: 500px;
+                flex: unset;
+            }
+            iframe{
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+    @include mobile{
+        position: relative;
+        flex-direction: column;
+        padding-top: 0;
+    }
+    &.column{
+        flex-direction: column;
+        justify-content: unset;
+        gap: 0;
+    }
+    &.p0{
+        padding-top: 0;
+    }
+    .page-title{
+        padding-top: 60px;
+        word-break: keep-all;
+        &.center{
+            text-align: center;
+            padding: 30px 0;
+            h2{
+                @include mobile{
+                    text-align: left;
+                    font-size: 3.6rem;
+                }
+            }
+        }
+        &.left{
+            text-align: left;
+            padding-top: 40px;
+            padding-bottom: 50px;
+        }
+        h2{
+            font-size: 3.6rem;
+            font-weight: 600;
+            color: $black;
+            @include mobile{
+                text-align: center;
+                font-size: 4rem;
+                color: #444;
+            }
+        }
+        p{
+            font-size: 1.8rem;
+            color: #444;
+            margin-top: 40px;
+            margin-bottom: 66px;
+            @include mobile{
+                margin-top: 25px;
+                margin-bottom: 60px;
+                text-align: center;
+                font-size: 2.4rem;
+            }
+        }
+        a{
+            font-size: 2rem;
+            font-weight: 500;
+            color: $white;
+            padding: 28px 0;
+            width: 400px;
+            background: $request;
+            text-align: center;
+            border-radius: 10px;
+        }
+    }
+    .r-sect{
+        a{
+            @include mobile{
+                color: #2c2e45;
+                font-size: 2.8rem;
+                font-weight: 500;
+                border: 2px solid #2C2E45;
+                text-align: center;
+                padding: 21px 0;
+                border-radius: 15px;
+                margin-top: 60px;
+            }
+        }
+    }
+    .page-img{
+        padding-top: 40px;
+    }
+}
+span.page-bar{
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: $m-color;
+    margin-top: 60px;
+    &.bold{
+        height: 4px;
+    }
+    &.h2{
+        height: 2px;
+    }
+    &.h4{
+        height: 4px;
+    }
+    @include mobile{
+        height: 4px;
+    }
+}
+
+.base-page{
+    padding-top: 40px;
+    .pagination{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        a{
+            position: relative;
+            width: 40px;
+            height: 40px;
+            border: 1px solid #d9d9d9;
+            background: #fff;
+            img{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+        span{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+            border: 1px solid #d9d9d9;
+            font-size: 1.8rem;
+            font-weight: 300;
+            background: #fff;
+            cursor: pointer;
+            &:hover{
+                background: $m-color;
+                color: #fff;
+                font-weight: 700;
+            }
+        }
+    }
+}
+
+.mopage{
+    display: flex !important;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding-top: 40px;
+    @include pc{
+        display: none !important;
+    }
+    button{
+        border: 1px solid #ddd;
+        border-radius: 15px;
+        height: 88px;
+        max-width: 260px;
+        width: 100%;
+        @include mobile2{
+            height: 50px;
+        }
+        img{
+            @include mobile2{
+                width: 22px;
+            }
+        }
+    }
+    p{
+        font-size: 2.8rem;
+        color: #222;
+        white-space: nowrap;
+        .nowp{
+            font-weight: 600;
+        }
+        .vir{
+            font-weight: 600;
+        }
+        .futp{
+            font-weight: 400;
+        }
+    }
+}

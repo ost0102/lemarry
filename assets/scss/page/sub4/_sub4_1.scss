@@ -1,0 +1,82 @@
+.crown{
+    &-inner{
+        .crown_member{
+            .member-img{
+                position: relative;
+                img{}
+                p{
+                    font-family: "Nanum Myeongjo", serif;
+                    font-size: 6.4rem;
+                    position: absolute;
+                    top: 50%;
+                    left: 35%;
+                    transform: translate(-50%, -50%);
+                    color: #fff;
+                    font-weight: bold;
+                }
+            }
+        }
+        .crown_per{
+            padding: 111px 0;
+        }
+        .crown_pro{
+            .pro-img{
+                position: relative;
+                img:nth-child(1){
+
+                }
+                .pro-txt{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 60px;
+                    position: absolute;
+                    top: 50%;
+                    left: 20%;
+                    transform: translate(-50%, -50%);
+                    opacity: 0;
+                    p:nth-child(1){
+                        font-size: 7rem;
+                        font-weight: bold;
+                        color: #fff;
+                    }
+                    p:nth-child(2){
+                        font-size: 2.2rem;
+                        color: #fff;
+                        span{
+                            color: #edba40;
+                        }
+                    }
+                }
+                img:nth-child(3){
+                    position: absolute;
+                    top: 50%;
+                    left: 75%;
+                    transform: translate(-50%, -50%) rotateY(-90deg);
+                }
+            }
+        }
+        .vip{
+            padding-top: 100px;
+            padding-bottom: 144px;
+        }
+        .benefit{
+            background: #f3f3f3;
+            &-inner{
+                padding-top: 100px;
+                padding-bottom: 422px;
+                position: relative;
+                img:nth-child(2){
+                    position: absolute;
+                    left: 50%;
+                    bottom: -170px;
+                    transform: translateX(-50%);
+                }
+            }
+        }
+        .white{
+            width: 100%;
+            height: 335px;
+            background: #fff;
+        }
+    }
+}

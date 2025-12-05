@@ -1,0 +1,25 @@
+.story{
+    padding: 100px 20px;
+    &-inner{
+        .story-title{
+            text-align: center;
+            padding-bottom: 40px;
+            .gold{
+                font-size: 4rem;
+                font-weight: bold;
+                span{color: #000;}
+            }
+        }
+        .story-list{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            column-gap: 30px;
+            row-gap: 50px;
+            max-width: 1212px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 0 20px;
+            padding-bottom: 60px;
+        }
+    }
+}

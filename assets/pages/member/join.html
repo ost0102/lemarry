@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>디노블</title>
+
+    <link rel="stylesheet" href="../../css/style.css">
+
+    <script
+  src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
+  integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8="
+  crossorigin="anonymous"></script>
+    <script src="../../js/member/join.js"></script>
+</head>
+<body>
+    <header></header>
+    <main>
+        <section class="header-bg">
+            <div class="bg-inner">
+                <h2>회원가입</h2>
+                <img src="../../images/sub1/sub1-bg.png" alt="회원가입">
+            </div>
+        </section>
+        <section class="join_wrap">
+            <form name="frmjoin" id="frmjoin" action="" method="post" target="pJoin" data-gtm-form-interact-id="0">
+				<input type="hidden" name="webpgcate" value="0">
+				<input type="hidden" name="webtsub" value="1">
+				<input type="hidden" name="idcheck" id="idchkw" value="">
+				<input type="hidden" name="jhpauth" id="jhpauthw" value="">
+				<input type="hidden" name="jhpNum" id="jhpNumw" value="">
+				<input type="hidden" name="joinmobchk" value="0">
+				<input type="hidden" name="reffurl" id="reffurlW" value="">
+				<input type="hidden" name="thirdparty" id="thirdpartyW" value="">
+				<input type="hidden" name="marketing" id="marketingW" value="">
+				<input type="hidden" name="evtidx" id="evtidxwj" value="">
+				<div class="id_info">
+                    <h2>회원가입</h2>
+                    <p>아이디 등록</p>
+					<table>
+						<tbody><tr>
+							<th>아이디</th>
+							<td><input type="text" name="idreg" id="idregw" maxlength="12" value="" style="ime-mode:disabled;" onkeyup="fncOnlyEnglish(this);"><a class="btn_cur" id="chkID">ID 중복검사</a><span>4~12자리의 영문자, 숫자를 입력해주세요</span></td>
+						</tr>
+						<tr>
+							<th>비밀번호</th>
+							<td id="pTxt1"><input class="upwd" type="password" name="pwdreg" id="pwdregw" maxlength="12" value="" style="ime-mode:disabled;"><span>4자~12자리의 영문자, 숫자를 입력해주세요</span></td>
+						</tr>
+						<tr>
+							<th>비밀번호 확인</th>
+							<td id="pTxt2"><input class="upwd" type="password" name="pwdreg2" id="pwdregw2" maxlength="12" value="" style="ime-mode:disabled;"><span>비밀번호를 다시 한번 입력해주세요</span></td>
+						</tr>
+					</tbody></table>
+				</div>
+				<div class="basic_info">
+                    <p>기본정보 입력</p>
+					<table>
+						<tbody><tr>
+							<th>이름</th>
+							<td><input type="text" class="size_l" name="namereg" id="nameregw" value="" style="ime-mode:active;"></td>
+							<th style="padding-left: 20px;">출생년도</th>
+							<td>
+								<div class="selectbox" style="margin-left: auto;">
+									<label for="ageregw">선택</label>
+									<select name="agereg" id="ageregw">
+										<option value="" selected="">선택</option>
+									<option value="2005">2005</option><option value="2004">2004</option><option value="2003">2003</option><option value="2002">2002</option><option value="2001">2001</option><option value="2000">2000</option><option value="1999">1999</option><option value="1998">1998</option><option value="1997">1997</option><option value="1996">1996</option><option value="1995">1995</option><option value="1994">1994</option><option value="1993">1993</option><option value="1992">1992</option><option value="1991">1991</option><option value="1990">1990</option><option value="1989">1989</option><option value="1988">1988</option><option value="1987">1987</option><option value="1986">1986</option><option value="1985">1985</option><option value="1984">1984</option><option value="1983">1983</option><option value="1982">1982</option><option value="1981">1981</option><option value="1980">1980</option><option value="1979">1979</option><option value="1978">1978</option><option value="1977">1977</option><option value="1976">1976</option><option value="1975">1975</option><option value="1974">1974</option><option value="1973">1973</option><option value="1972">1972</option><option value="1971">1971</option><option value="1970">1970</option><option value="1969">1969</option><option value="1968">1968</option><option value="1967">1967</option><option value="1966">1966</option><option value="1965">1965</option><option value="1964">1964</option><option value="1963">1963</option><option value="1962">1962</option><option value="1961">1961</option><option value="1960">1960</option><option value="1959">1959</option><option value="1958">1958</option><option value="1957">1957</option><option value="1956">1956</option><option value="1955">1955</option><option value="1954">1954</option><option value="1953">1953</option><option value="1952">1952</option><option value="1951">1951</option></select>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th>성별</th>
+							<td>
+								<div class="checks_all">
+									<input type="radio" name="genreg" id="genregwM" value="M"><label for="genregwM"></label>
+									<input type="radio" name="genreg" id="genregwF" value="F"><label for="genregwF">여</label>
+								</div>
+							</td>
+							<th style="padding-left: 20px;">결혼구분</th>
+							<td>
+								<div class="checks_all">
+									<input type="radio" name="mtypereg" id="mtyperegw1" value="0" data-gtm-form-interact-field-id="1"><label for="mtyperegw1">초혼</label>
+									<input type="radio" name="mtypereg" id="mtyperegw2" value="1" data-gtm-form-interact-field-id="0"><label for="mtyperegw2">재혼</label>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th>거주지역</th>
+							<td>
+								<div class="selectbox">
+									<label for="addregw">선택</label>
+									<select name="addreg" id="addregw">
+										<option value="" selected="">선택</option>
+									<option value="서울">서울</option><option value="경기">경기</option><option value="인천">인천</option><option value="부산">부산</option><option value="대구">대구</option><option value="대전">대전</option><option value="세종">세종</option><option value="울산">울산</option><option value="광주">광주</option><option value="경남">경남</option><option value="경북">경북</option><option value="충남">충남</option><option value="충북">충북</option><option value="전남">전남</option><option value="전북">전북</option><option value="강원">강원</option><option value="제주">제주</option><option value="해외">해외</option></select>
+								</div>
+							</td>
+							<th style="padding-left: 20px;">기타주소</th>
+							<td>
+								<div class="selectbox" style="margin-left: auto;">
+									<label for="mBranchw">선택</label>
+									<select name="mBranch" id="mBranchw">
+										<option value="">지사 선택</option>
+										<option value="1">서울본사</option>
+										<option value="6">경기지사</option>
+										<option value="4">부산지사</option>
+										<option value="3">대구지사</option>
+										<option value="2">대전지사</option>
+										<option value="5">광주지사</option>
+									</select>
+								</div>
+							</td>
+						</tr>
+						<tr class="phone">
+							<th>휴대폰</th>
+							<td colspan="3">
+								<div class="selectbox">
+									<label for="hp1regw">선택</label>
+									<select name="hp1reg" id="hp1regw">
+										<option value="" selected="">선택</option>
+									<option value="010">010</option><option value="011">011</option><option value="016">016</option><option value="017">017</option><option value="018">018</option><option value="019">019</option></select>
+								</div>
+								<input type="tel" name="hp2reg" id="hp2regw" value="" maxlength="4" onblur="number_ok(this);">
+								<input type="tel" name="hp3reg" id="hp3regw" value="" maxlength="4" onblur="number_ok(this);">
+								<a class="btn_cur" id="chkTel">인증요청</a> 
+								<div class="input_number">
+									<input type="num" name="okreg" id="okregw" value="" min="100000" max="999999" maxlength="6" onblur="checkAnum(this);"><span class="aText">인증번호</span><a class="btn_cur" id="chkNum" style="display: none;">확인</a>
+								</div>
+							</td>
+						</tr>
+						<tr class="email">
+							<th>이메일</th>
+							<td colspan="3">
+								<input type="text" name="emailreg" id="emailregw" value="" style="ime-mode:disabled;">
+								<i>@</i>
+								<input type="text" name="edomreg" id="edomregw" value="" style="ime-mode:disabled;" readonly="readonly">
+								<div class="selectbox">
+									<label for="edomregws">선택</label>
+									<select name="edomregs" id="edomregws">
+										<option value="" selected="">선택</option>
+									<option value="naver.com">naver.com</option><option value="daum.net">daum.net</option><option value="nate.com">nate.com</option><option value="hotmail.com">hotmail.com</option><option value="yahoo.com">yahoo.com</option><option value="gmail.com">gmail.com</option><option value="직접입력">직접입력</option></select>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th>학력</th>
+							<td>
+								<div class="selectbox">
+									<label for="eduregw">학력선택</label>
+									<select name="edureg" id="eduregw">
+										<option value="" selected="">학력선택</option>
+									<option value="고졸">고졸</option><option value="전문대 졸업">전문대 졸업</option><option value="전문대 재학">전문대 재학</option><option value="전문대 중퇴">전문대 중퇴</option><option value="대학교 졸업">대학교 졸업</option><option value="대학교 재학">대학교 재학</option><option value="대학교 중퇴">대학교 중퇴</option><option value="석사 졸업">석사 졸업</option><option value="석사 수료">석사 수료</option><option value="석사 재학">석사 재학</option><option value="석사 중퇴">석사 중퇴</option><option value="박사 졸업">박사 졸업</option><option value="박사 수료">박사 수료</option><option value="박사 재학">박사 재학</option><option value="박사 중퇴">박사 중퇴</option><option value="기타">기타</option></select>
+								</div>
+							</td>
+							<th style="padding-left: 20px;">최종학교</th>
+							<td style="width: 210px;"><input type="text" name="snamereg" id="snameregw" value="" style="ime-mode:active; margin-left: auto;"></td>
+						</tr>
+						<tr>
+							<th>직업</th>
+							<td>
+								<div class="selectbox">
+									<label for="jobregw">직업선택</label>
+									<select name="jobreg" id="jobregw">
+										<option value="" selected="">직업선택</option>
+									<option value="판사/검사/변호사">판사/검사/변호사</option><option value="법률계">법률계</option><option value="의사/치과/한의사">의사/치과/한의사</option><option value="의료계">의료계</option><option value="행시/외시">행시/외시</option><option value="공무원">공무원</option><option value="경찰/군인">경찰/군인</option><option value="공기업">공기업</option><option value="회계사/변리사">회계사/변리사</option><option value="교수/시간강사">교수/시간강사</option><option value="학원강사">학원강사</option><option value="교직원">교직원</option><option value="CEO">CEO</option><option value="자영업">자영업</option><option value="대기업">대기업</option><option value="중소기업">중소기업</option><option value="금융직">금융직</option><option value="언론인">언론인</option><option value="연예인">연예인</option><option value="문화/예술/체육">문화/예술/체육</option><option value="승무원">승무원</option><option value="종교인">종교인</option><option value="프리랜서">프리랜서</option><option value="대학생">대학생</option><option value="대학원생">대학원생</option><option value="기타">기타</option></select>
+								</div>
+							</td>
+							<th style="padding-left: 20px;">직장명</th>
+							<td><input type="text" name="onamereg" id="onameregw" value="" style="ime-mode:active; margin-left: auto;"></td>
+						</tr>
+					</tbody></table>
+				</div>
+				<div class="agree">
+                    <h2>이용약관/개인정보 취급방침</h2>
+					<ul>
+						<li style="width: 310px;">
+							<strong>온라인 회원 이용약관</strong>
+							<div>
+								
+
+제 1 조 (목적 등)
+
+1) 이 약관은 퍼플스(주)(이하 "회사"라 합니다.)가 운영하는 인터넷 사이트 (www.purples.co.kr 및 동 사이트의 기본 DB를 공유하는 모든 사이트를 말함, 이하 "PURPLES" 라 합니다) 에서 제공하는 제반 서비스(이하 "서비스"라 합니다)를 이용자가 이용함에 있어 이용자와 퍼플스(주)의 권리·의무 및 책임사항을 규정함을 목적으로 합니다.
+
+2) 이용자와  "PURPLES" 의 권리, 의무 및 책임사항에 관한 문제 중 본 약관에 정하는 이외의 사항에 대해서는 전기통신사업법 기타 대한민국의 관련 법령과 상관습에 의합니다.
+
+
+
+제 2 조 (용어의 정의)
+
+이 약관에서 사용하는 용어의 정의는 다음과 같습니다.
+
+1) 인 터 넷 회    원 : 본 "PURPLES" 서비스를 제공받기 위하여 인터넷 회원 이용자 아이디(ID)를 부여 받은 자를 말합니다.
+
+
+
+제 3 조 (약관의 효력 및 변경)
+
+1) 이 약관은 사이트를 통하여 알리거나, 전자우편 등의 방법으로 회원에게 알림으로써 효력을 발생합니다.
+
+2) 회사는 전기통신기본법 등 관련법령을 위배하지 않는 범위에서 이 약관을 개정할 수 있습니다.
+
+3) 회사가 이 약관을 개정할 경우에는 적용일자 및 개정사유를 명시하여 현행약관과 함께 그 적용일자 15일 이전부터 적용일자 전일까지 1항의 방법으로 예고합니다.
+
+
+
+제 4 조 (회원가입)
+
+1) "PURPLES" 회원이 되고자 하는 자는 "PURPLES"가   정한 가입양식에 따라 회원정보를 기입하고 "약관에 동의합니다" 및 "회원가입" 단추를 누르는 방법으로 회원가입을 신청합니다.
+
+2) 가입신청 양식에 기재하는 모든 정보는 실제 데이터인 것으로 간주됩니다. 내용이 허위(차명, 비실명, 주민등록번호 도용 등)인 것으로 판명되거나, 그러하다고 의심할만한 합리적인 사유가 발생할 경우 귀하는 법적인 보호를 받을 수 없고, "PURPLES"는 귀하의 본 서비스 사용을 일부 또는 전부 중지할 수 있으며, 이로 인해 발생하는 모든 불이익에 대해 책임을 지지 않습니다.
+
+3) "PURPLES"는   제1항과 같은 방법으로 회원가입을 신청한 자가 다음 각 호에 해당되지 않는 한 신청한 자를 회원으로 등록합니다. 그러나 다음 각 호에 해당하는 자에게는 회원가입 승낙을 유보하거나 "PURPLES" 사이트 이용을 제한할 수 있습니다.
+
+1. 등록내용이 허위(차명, 비실명, 주민등록번호 도용 등)인 것으로 판명되거나, 그러하다고 의심할 만한 합리적인 사유가 발생할 경우
+
+2. 가입신청자가 본 약관 제 8 조 6항에 의해 회원자격을 상실한 적이 있는 경우
+
+3. 기술상 지장이 있는 경우
+
+4. 사회의 안녕질서 또는 미풍양속을 저해할 목적으로 신청한 경우
+
+5. 기타 회사의 사정상 이용승낙이 곤란하거나 회사가 정한 이용신청요건이 미비 되었을 경우
+
+4) 회원가입계약의 성립시기는 "PURPLES" 의 승낙이 가입신청자에게 도달한 시점으로 합니다.
+
+
+
+제 5 조 (회원가입비)
+
+인터넷 회원 가입비는 무료입니다. 그러나 정회원 서비스에 한하여 유료이며, 무통장입금, 카드결제 등의 방법으로 납부 후, "PURPLES" 로부터 신원인증절차가 완료되면 서비스를 제공받을 수 있습니다.
+
+
+
+제 6 조 (회사의 의무와 권한)
+
+1) 회사는 본 약관이 정하는 바에 따라 지속적이고, 안정적으로 서비스를 제공하기 위해서 노력합니다.
+
+2) 회사는 서비스 제공과 관련해서 알고 있는 회원의 신상정보를 본인의 승낙 없이 제3자에게 누설, 배포하지 않습니다. 단, 본인이 승낙한 경우, 전기통신기본법 등 법률의 규정에 의해 국가기관의 요구가 있는 경우, 범죄에 대한 수사상의 목적이 있거나 정보통신 윤리 위원회의 요청이 있는 경우 또는 기타 관계법령에서 정한 절차에 따른 요청이 있는 경우 귀하가 당사에 제공한 개인정보를 스스로 공개한 경우에는 그러하지 않습니다.
+
+3) 2항의 범위 내에서 회사는 업무와 관련하여 회원 전체 또는 일부의 개인정보에 관한 통계 자료를 작성하여 이를 사용할 수 있고, 서비스를 통하여 회원의 컴퓨터에 쿠키를 전송할 수 있습니다. 이 경우 회원은 쿠키의 수신을 거부하거나 쿠키의 수신에 대하여 경고하도록 사용하는 컴퓨터의 브라우저의 설정을 변경할 수 있습니다.
+
+4) 회사는 회원이 서비스 이용 중 필요가 있다고 인정되는 다양한 정보 및 광고를 전자우편이나 서신 등으로 제공합니다.
+
+5) 회사는 회원으로부터 제기되는 불만이 정당하다고 인정할 경우에는 적극적으로 처리함을 원칙으로 합니다.
+
+
+
+제 7 조 (회원의 의무와 책임)
+
+회원 가입 시에 요구되는 회원 자신의 정보는 진실하고 정확하여야 합니다. 또한 이미 제공된 귀하에 대한 정보가 진실하고, 정확한 정보가 되도록 유지, 갱신하여야 하며 그러하지 아니하여 발생하는 문제의 책임은 귀하에게 있습니다. 단, 이름, 아이디, 주민등록번호 등은 수정할 수 없습니다.
+
+1) 회원이 제공하는 정보의 내용이 허위(차명, 비실명, 주민등록번호 도용 포함)인 것으로 판명되거나, 그러하다고 의심할 만한 합리적인 사유가 발생할 경우 회사는 회원에 대해 본 서비스 제공을 일부 또는 전부 중지할 수 있습니다.
+
+2) 회원이 제공한 정직하지 않은 정보와 그 이외의 행위로 인해 타인에게 끼친 나쁜 영향에 대한 책임은 회원 본인에게 있으며, 회사는 그에 대한 손해배상 청구 및 법률적 책임을 물을 수 있습니다.
+
+3) 회원이 본 서비스를 통하여 게시, 전송, 입수하였거나 전자메일 기타 다른 수단에 의하여 게시, 전송 또는 입수한 모든 형태의 정보에 대하여는 해당회원이 모든 책임을 부담하며 당사는 어떠한 책임도 부담하지 아니합니다.
+
+4) 회사는 당사가 제공한 서비스가 아닌 가입자 또는 기타 제휴사가 제공하는 서비스의 내용상의 정확성, 완전성 및 질에 대하여 보장하지 않습니다. 따라서 회사는 회원이 위 내용을 이용함으로 인하여 입게 된 모든 종류의 손실이나 손해에 대하여 책임을 부담하지 아니합니다.
+
+5) 회원은 본 서비스를 통하여 다음과 같은 행동을 하지 않는데 동의해야 하며 아래사항의 발생시 회사는 서비스의 일부 또는 전부 중지할 수 있으며 타인에게 끼친 부정적인 영향에 대해 손해배상을 청구할 수 있습니다. 또한 회원이 게재한 모든 정보는 R&amp;D Club 운영자가 임의로 삭제할 수 있습니다.
+
+1. 타인의 ID와 Password, 주민번호, 성명을 도용하는 행위 및 자신의 ID와 Password를 누설하는 행위
+
+2. 공공질서 및 미풍양속을 저해할만한 저속, 음란, 모욕적, 위협적이거나 타인의 프라이버시를 침해할 수 있는 내용을 전송, 게시, 게재, 전자 메일 또는 기타의 방법으로 전송하는 행위
+
+3. 서비스를 통하여 전송된 내용의 출처를 위장하는 행위
+
+4. 타인의 특허, 상표, 영업비밀, 저작권, 기타 지적재산권을 침해하는 내용을 게시, 게재, 전자메일 또는 기타의 방법으로 전송하는 행위
+
+5. 회사의 승인을 받지 아니한 불법선거운동, 광고, 판촉물, 정크메일, 스팸, 행운의 편지, 피라미드 조직 기타 다른 형태의 권유를 게시, 게재, 전자메일 또는 기타의 방법으로 전송하는 행위
+
+6. 다른 사용자의 개인정보를 수집 또는 저장하는 행위
+
+7. 서비스 운영을 고의로 방해하는 행위
+
+8. 정보통신설비의 오작동이나 정보 등의 파괴를 유발시키는 컴퓨터 바이러스 프로그램 등을 유포하는 행위
+
+9. "PURPLES" 의 승인 없이 "PURPLES" 의 서비스 정보를 복제 또는 유통시키거나 상업적으로 이용하는 행위
+
+10. 본 약관을 포함하여 기타 회사가 정한 정책을 위반한 행위
+
+11. 기타 회사의 서비스 개선을 위한 회사 정책 상 불가피한 경우
+
+6) 위 제 8 조 5)항 또는 기타 이와 유사한 이유로 타회원으로부터 강제탈퇴 또는 불량회원으로 일반에 공개할 것을 요구 받는 경우, 신고를 당한 회원의 활동은 정지되며, 회사는 사실확인 작업에 들어갑니다. 신고의 내용이 적절했다고 판단되면 "PURPLES" 관리자는 유,무선을 통해 원활한 회원활동을 권고하게 되며, 이는 1차 불량회원 경고에 해당합니다. 권고 후에도 이와 같은 일이 3회 이상 계속될 때에는 강제탈퇴 처리함을 원칙으로 합니다.
+
+
+
+제 8 조 (회사에 제출 및 "PURPLES" 에 게재된 게시물의 저작권 및 게시물 보존의 의무)
+
+1) 회원이 게시한 게시물의 내용에 대한 권리 및 책임은 회원에게 있습니다.
+
+2) 아래의 경우, 회사는 게시된 내용을 사전 통지 없이 편집, 이동, 삭제 할 수 있는 권리를 보유하며,"PURPLES"가 운영하는 PC통신 사이트, 무선인터넷사이트 및 인터넷사이트(제휴 사이트 포함)에 회원이 게재한 게시물(개인프로필 기타게시물 포함)을 편집 이동 할 수 있습니다.
+
+A. 게시된 내용이 본 약관에 위배되는 경우
+
+B. 상용 또는 불법, 음란, 저속하다고 판단되는 게시물을 게시한 경우,
+
+C. 정당한 권한이나 해당 프로그램 저작권자의 허락 없이 프로그램등을 제거, 변경, 복제, 게시, 전송, 링크, 배포하는 경우
+
+D. 저작자의 실명 또는 이명을 변경 또는 은닉 하거나 해당 프로그램의 제호를 변경 하는 경우
+
+3) 회원의 게시물이 타인의 저작권을 침해함으로써 발생하는 민,형사상의  책임은 전적으로 회원이 부담하여야 합니다.
+
+4) "PURPLES"(개인 신상자료 등 포함)에 등록된 게재물에 대한 보존의 의무는 회원 개인이 가지며 그 보존의 책임은 회사가 지지 않습니다.
+
+
+
+제 9 조 (서비스 제공의 중지)
+
+회사는 다음 각 호에 해당하는 경우 서비스의 전부 또는 일부를 제한하거나 중지할 수 있습니다.
+
+1) 서비스용 설비의 보수 등 공사로 인한 부득이한 경우 (정기점검, 긴급조치 등)
+
+2) 국가비상사태, 천재지변, 정전, 제반 설비의 장애 또는 이용량의 폭주 등으로 정상적인 서비스 이용에 지장이 있는 때
+
+3) 기타 불가항력적 사유가 있는 경우
+
+
+
+제 10 조 (이용자의 ID, 비밀번호 및 접속종료에 대한 의무)
+
+1) 회원의 ID와 비밀번호에 관한 관리책임은 회원본인에게 있습니다.
+
+2) 회원은 본인의 ID 및 비밀번호를 제3자에게 이용하게 해서는 안됩니다.
+
+3) 회원은 본인의 ID 및 비밀번호를 도난 당하거나 제3자가 사용하고 있음을 인지한 경우에는 바로 회사에 통보하고 회사의 안내가 있는 경우에는 그에 따라야 합니다.
+
+4) 회원은 본 서비스의 매 사용 종료 시마다 정확히 접속을 종료하도록 하여야 하며, 정확히 종료 하지 아니함으로써 제3자가 귀하에 관한 정보를 이용하게 되는 등의 결과에 의하여 귀하에게 발생하는 손해 및 손실에 대하여는 당사는 책임을 부담하지 아니합니다.
+
+
+
+제 11 조 (회원자격의 취득 및 해지)
+
+1) 회원 자격은 본 약관에 동의하고 R"PURPLES"의 개인 ID를 부여 받음으로써 취득 됩니다.
+
+2) 회원 해지(탈퇴)는 가입되어 있는 회원 본인이 "PURPLES" 운영자에게 문서나 전자 메일 또는 유무선 통신을 통해 해지 요청을 함으로써 처리됩니다. 해지 처리를 하는 과정에서 시스템의 문제나 불량회원 등록 확인 등으로 수일의 시간이 필요하다고 판단될 때는 회원에게 사유를 공지하고 추후에 해지 처리하게 됩니다.
+
+
+
+제 12 조 (면책조항)
+
+1) 회사는 천재지변 또는 이에 준하는 불가항력으로 인하여 서비스를 제공할 수 없는 경우에는 서비스 제공에 관한 책임이 면제됩니다.
+
+2) 회사는 회원이 회사의 서비스 제공으로부터 기대되는 이익을 얻지 못하였거나, 서비스 자료에 대한 취사 선택 또는, 이용으로 발생하는 손해 등에 대해서는 책임이 면제됩니다.
+
+3) 회사는 회원이 서비스에 게재한 정보, 자료, 사실의 신뢰도, 정확성 등 그 내용에 관해서 책임이 면제됩니다.
+
+4) 회원이 공개를 허락한 자료에 대하여 발생된 문제에 대하여서는 책임이 면제됩니다.
+
+
+
+제 13 조(회원에 대한 통지)
+
+회원에 대한 통지 및 예고는 서면, 전화, 모사전송 또는 전자우편(e-mail)의 방법으로 할 수 있습니다.
+
+
+
+제 14 조 (약관의 해석)
+
+이 약관에서 정하지 아니한 사항과 이 약관의 해석은 관계법령 및 상 관례에 따릅니다.
+
+
+
+제 15 조 (분쟁해결)
+
+1) 회사는 회원으로부터 제출되는 불만사항 및 의견은 우선적으로 그 사항을 처리합니다. 다만, 신속한 처리가 곤란한 경우에는 회원에게 그 사유와 처리일정을 즉시 통지해 드립니다.
+
+2) 이 약관과 관련하여 당사자 사이에 다툼이 있는 경우에는 당사자의 협의로 처리하되 신의성실의 원칙에 따라 원만히 해결합니다.
+
+
+
+제 16 조 (재판관할 및 준거법)
+
+1) 약관과 관련하여 회사와 회원간에 발생한 분쟁에 관한 소송은 민사소송법상의 관할법원에 제기합니다.
+
+2) 이 약관과 관련하여 회사와 회원간에 제기된 소송에는 한국 법을 적용합니다.
+
+
+
+부 칙
+
+본 약관은 2002년 11월 01일부터 시행합니다.
+							</div>
+							<p class="checks_nomal">
+								<input type="radio" name="onregw" id="onregw1" value="1"><label for="onregw1">온라인 회원 이용약관에 동의합니다.</label>
+							</p>
+						</li>
+						<li class="right" style="width: 310px;">
+							<strong>개인정보 처리방침</strong>
+							<div>
+								1. 처리하는 개인정보의 항목<br>
+&nbsp;&nbsp;&nbsp;&nbsp;본 업체는 결혼 중개 및 관련 상담을 위해 필요한 최소한의 개인정보만을 수집<br>
+&nbsp;&nbsp;&nbsp;&nbsp;합니다. 선택 항목은 입력하지 않더라도 기본적인 서비스 이용에는 제한이 없습<br>
+&nbsp;&nbsp;&nbsp;&nbsp;니다. (단, 아래와 같이 정회원이 아닌 본사 홈페이지에 회원가입을 하거나, 운세,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;결혼테스트, 미팅파티, 무료상담, 안내자료 요청, 이벤트 신청 등을 하는 회원<br>
+&nbsp;&nbsp;&nbsp;&nbsp;(이하 '준회원'이라 함)의 경우에는 이름, 나이(출생연도), 성별, 결혼이력, 학력,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;거주지 및 직업, 연락처 등을 수집합니다)<br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;[(국내)결혼중개 계약서 상 수집항목]<br>
+&nbsp;&nbsp;&nbsp;- 필수 수집 항목 : 이름, 성별, 출생년도, 결혼구분, 거주지역, 휴대폰 번호, 학력, 직업 등<br>
+&nbsp;&nbsp;&nbsp;- 선택 수집 항목 : 최종학교명, 직장명 등<br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;서비스 이용과정이나 사업처리 과정에서 아래와 같은 정보들이 자동으로 생성<br>
+&nbsp;&nbsp;&nbsp;&nbsp;되어 수집될 수 있습니다.<br>
+&nbsp;&nbsp;&nbsp;- IP Address, 쿠키, 방문 일시, 서비스 이용 기록, 불량 이용 기록, 기기정보<br><br>
+2. 개인정보의 처리 목적<br>
+&nbsp;&nbsp;&nbsp;&nbsp;본 사는 수집한 개인정보를 다음의 목적을 위해 활용합니다. 이용자가 제공한<br>
+&nbsp;&nbsp;&nbsp;&nbsp;모든 정보는 다음에 기술한 목적 이외로는 사용되지 않으며, 이용 목적이 변경될<br>
+&nbsp;&nbsp;&nbsp;&nbsp;시에는 사전 동의를 구할 것입니다.<br>
+&nbsp;&nbsp;&nbsp;- 홈페이지 회원 가입 및 관리<br>
+&nbsp;&nbsp;&nbsp;- 결혼중개 업무 수행<br>
+&nbsp;&nbsp;&nbsp;- 결혼과 관련된 각종 상담<br>
+&nbsp;&nbsp;&nbsp;- 고충처리 등<br><br>
+3. 개인정보의 처리 및 보유기간<br>
+&nbsp;&nbsp;&nbsp;&nbsp;개인정보의 수집목적 또는 제공받은 목적이 달성된 때에는 귀하의 개인정보를<br>
+&nbsp;&nbsp;&nbsp;&nbsp;지체 없이 파기합니다.<br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;[2012년 8월 1일까지 적용]<br>
+&nbsp;&nbsp;&nbsp;- 상담을 위한 경우 : 상담이 종료된 시점<br>
+&nbsp;&nbsp;&nbsp;- 결혼중개를 위하여 수집한 경우 : 3년<br>
+&nbsp;&nbsp;&nbsp;* 결혼중개 계약서 (근거 : 결혼중개업법 시행규칙 9조)<br>
+&nbsp;&nbsp;&nbsp;* 종사자 명부 (근거 : 결혼중개업법 시행규칙 11조)<br>
+&nbsp;&nbsp;&nbsp;* 회원 명부 (근거 : 결혼중개업법 시행규칙 11조)<br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;[2012년 8월 2일 이후 적용]<br>
+&nbsp;&nbsp;&nbsp;- 상담을 위한 경우 : 상담이 종료된 시점<br>
+&nbsp;&nbsp;&nbsp;- 결혼중개를 위하여 수집한 경우 : 5년<br>
+&nbsp;&nbsp;&nbsp;* 결혼중개 계약서 (근거 : 결혼중개업법 시행규칙 9조)<br>
+&nbsp;&nbsp;&nbsp;* 국제결혼 개인신상정보 확인서 및 관련 증빙서류<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(근거 : 결혼중개업법 시행규칙 9조)<br>
+&nbsp;&nbsp;&nbsp;* 상대방 언어 번역본 포함<br>
+&nbsp;&nbsp;&nbsp;* 그 밖의 혼인관련 서류 (근거 : 결혼중개업법 시행규칙 9조)<br>
+&nbsp;&nbsp;&nbsp;* 종사자 및 회원명부 (근거 : 결혼중개업법 시행규칙 11조)<br>
+
+							</div>
+							<p class="checks_nomal">
+								<input type="radio" name="privregw" id="privregw1" value="1"><label for="privregw1">개인정보 처리방침 동의합니다.</label>
+							</p>
+						</li>
+						<li style="width: 310px;">
+							<strong>제3자 정보제공</strong>
+							<div>
+								1) 르매리주식회사(업무제휴사)<br>
+- 개인정보를 제공받는 자 : 르매리㈜<br>
+- 제공받는 자의 개인정보 이용목적 : 결혼중개 및 관련 상담업무<br>
+- 제공하는 개인정보 항목 : 제1조의 "처리하는 개인정보의 항목"<br>
+- 제공받는 자의 보유ㆍ이용기간 : 제3조의 "개인정보의 처리 및 보유기간" 동안<br><br>
+
+2) 디노블정보주식회사(업무제휴사) &lt;신설 2015년 1.28일&gt;<br>
+- 개인정보를 제공받는 자 : 디노블정보㈜<br>
+- 제공받는 자의 개인정보 이용목적 : 결혼중개 및 관련 상담업무<br>
+- 제공하는 개인정보 항목 : 제1조의 "처리하는 개인정보의 항목"<br>
+- 제공받는 자의 보유ㆍ이용기간 : 제3조의 "개인정보의 처리 및 보유기간" 동안<br><br>
+
+(여성가족부에 자료 제출, 시장ㆍ군수ㆍ구청장에의 자료제출, 수사 목적으로 수사기관에서 자료 요구 시에는 법적 사항이므로 동의 없이 제공이 가능합니다.)
+
+							</div>
+							<p class="checks_nomal">
+								<input type="radio" name="thirdpregw" id="thirdpregw1" value="1"><label for="thirdpregw1">제3자 정보제공에 동의합니다.</label>
+							</p>
+						</li>
+						<li class="right" style="width: 310px;">
+							<strong>마케팅 정보제공</strong>
+							<div>
+								1. 본사는 회원의 개인정보를 마케팅을 위하여 제3자에게 제공하지 않습니다.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;다만, 본사는 회원의 개인정보를 본사의 커플매니저 및 이벤트/마케팅 담당자가<br>
+&nbsp;&nbsp;&nbsp;&nbsp;제공받아 결혼관련 서비스 상담 및 이용 권유, 광고게재 및 각종 서비스 안내,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;알림톡 서비스 제공, 이벤트 / 마케팅 정보 안내와 홍보, 설문 조사를 위한 정보 확보를 위하여 이용<br>
+&nbsp;&nbsp;&nbsp;&nbsp;하고 있습니다.<br><br>
+2. 제공받는 개인정보의 내용<br>
+&nbsp;&nbsp;- 개인식별정보 (이름, 출생년도, 성별, 결혼유무, 지역, 학력, 직업, 연락처)<br><br>
+3. 제공받는 자의 개인정보 보유 및 이용기간<br>
+&nbsp;&nbsp;- 개인정보 삭제 및 탈회를 요청할 때까지 보유.이용합니다.<br>
+&nbsp;&nbsp;- 결혼회원 가입의 경우 개인정보에 관한 회사 내부 방침 및 관련 법률 등에 따라<br>
+&nbsp;&nbsp;&nbsp;&nbsp;개인정보를 보유합니다.<br><br>
+4. 상품권유중지청구(Do-Not Call): 위 마케팅정보제공 및 이용에 동의한 이후에도<br>
+&nbsp;&nbsp;&nbsp;&nbsp;전화[대표번호], 서면 등을 통해 마케팅활동에 대한 중지를 요청할 수 있습니다.
+							</div>
+							<p class="checks_nomal">
+								<input type="radio" name="mktregw" id="mktregw1" value="1"><label for="mktregw1">마케팅 정보제공에 동의합니다.</label>
+							</p>
+						</li>
+					</ul>
+				</div>
+				<div class="join_btn_area" style="display: flex; justify-content: center;">
+					<span class="join_btn">
+                        <a class="btn_cur" id="btnJoin">가입하기</a>
+                    </span>
+				</div>
+			  </form>
+        </section>
+    </main>
+    <footer></footer>
+</body>
+</html>

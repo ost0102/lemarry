@@ -1,0 +1,114 @@
+@use '../../../scss/base/var' as *;
+@use '../../../scss/utils/mixin' as *;
+
+form{
+    .partner-form{
+        max-width: 650px;
+        width: 100%;
+        margin: 0 auto;
+        padding-bottom: 119px;
+        @include mobile{
+            padding-bottom: 74px;
+        }
+        > div{
+            select{
+                -webkit-appearance: none;
+                -moz-appearance: none;     
+                appearance: none;
+                background: url(/assets/images/icn1.png) no-repeat 93% 50%;
+            }
+            select, input{
+                font-size: 1.6rem;
+                padding-left: 20px;
+                height: 60px;
+                border: 1px solid #BFBFBF;
+                color: #000;
+                &::placeholder{
+                    color: #000;
+                }
+            }
+        }
+        .input1, .input2, .input3{
+            margin-bottom: 18px;
+        }
+        .input1, .input2{
+            input{
+                width: 100%;
+            }
+        }
+        .input3{
+            display: flex;
+            align-items: center;
+            span{
+                display: block;
+                height: 2px;
+                background: #444;
+                padding: 0 4px;
+                margin: 0 17px;
+            }
+            input, select{
+                max-width: calc(100% - 84px);
+                width: 100%;
+            }
+            input{
+                &:nth-child(3), &:nth-child(5){
+                    padding-left: 0;
+                    text-align: center;
+                }
+            }
+            @include mobile{
+                select{
+                    &:nth-child(1){
+                        max-width: 212px;
+                    }
+                }
+                input{
+                    &:nth-child(3){
+                        max-width: 469px;
+                    }
+                }
+            }
+        }
+        .input4{
+            display: flex;
+            align-items: center;
+            span{
+                font-size: 1.6rem;
+                margin: 0 7px;
+            }
+            input{
+                width: 210px;
+                @include mobile{
+                    width: 100%;
+                }
+            }
+            select{
+                width: 188px;
+                margin-left: 14px;
+            }
+        }
+        .input5{
+            display: flex;
+            justify-content: center;
+            padding-top: 80px;
+            @include mobile{
+                padding-top: 60px;
+            }
+            a{
+                width: 400px;
+                height: 80px;
+                background: $request;
+                color: $white;
+                font-weight: 600;
+                font-size: 2rem;
+                text-align: center;
+                border-radius: 5px;
+                line-height: 80px;
+                @include mobile{
+                    height: 80px;
+                    font-size: 2.8rem;
+                }
+            }
+        }
+    }
+}

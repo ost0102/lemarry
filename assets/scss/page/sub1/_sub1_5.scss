@@ -1,0 +1,95 @@
+.year{
+    padding-top: 60px;
+    .tab{
+        max-width: 1280px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 20px;
+        &-inner{
+            .tab-list{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 14px;
+                background: #fff;
+                box-shadow: 0px 0px 20px 0px #a4a4a4;
+                border-radius: 5px;
+                padding: 23px 0;
+                li{
+                    button{
+                        font-size: 2.6rem;
+                        width: 220px;
+                        height: 50px;
+                        line-height: 50px;
+                        color: #000;
+                        &.on{
+                            background: #694100;
+                            border-radius: 30px;
+                            color: #fff;
+                            font-weight: 600;
+                        }    
+                    }
+                }
+            }
+        }
+    }
+    .award-wrap{
+        padding-top: 60px;
+        &--inner{
+            display: none;
+            &.on{
+                display: block;
+            }
+            .award{
+                padding-top: 100px;
+                padding-bottom: 120px;
+                &-txt{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    gap: 40px;
+                    padding-bottom: 40px;
+                    .gold{
+                        font-size: 4.8rem;
+                        font-weight: bold;
+                        text-align: center;
+                    }
+                    .sub{
+                        display: flex;
+                        flex-direction: column;
+                        gap: 20px;
+                        align-items: center;
+                        p{
+                            display: flex;
+                            align-items: center;
+                            gap: 30px;
+                            font-size: 2.4rem;
+                            span{
+                            }
+                        }
+                    }
+                    a{
+                        font-size: 3rem;
+                        font-weight: bold;
+                        padding: 12px 0;
+                        background: #694100;
+                        width: 240px;
+                        text-align: center;
+                        color: #fff;
+                        margin: 0 auto;
+                    }
+                }
+                .swiper-cont{
+                    .bigimg{
+                        > img{
+                            position: absolute;
+                            top: 3px;
+                            left: 20px;
+                            z-index: 2;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

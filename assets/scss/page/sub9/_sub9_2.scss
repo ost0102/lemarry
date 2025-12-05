@@ -1,0 +1,78 @@
+@use '../../../scss/base/var' as *;
+@use '../../../scss/utils/mixin' as *;
+
+.notice{
+    padding-top: 60px;
+    .page-inner{
+        .page-title{
+            h2{
+                @include mobile{
+                    font-size: 3.6rem;
+                }
+            }
+        }
+    }
+}
+.notice-cont{
+    padding-bottom: 186px;
+    .notice-list{
+        li{
+            border-bottom: 1px solid rgba(0, 0, 0, .2);
+            a{
+                display: flex;
+                align-items: center;
+                gap: 60px;
+                padding: 60px 0;
+                @include mobile{
+                    gap: 20px;
+                }
+                .no-img--cont{
+                    max-width: 300px;
+                    width: 100%;
+                    height: 194px;
+                    @include mobile{
+                        max-width: 200px;
+                        height: 129px;
+                    }
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+                .no-txt{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+                    color: #444;
+                    .no-title{
+                        font-size: 2.6rem;
+                        font-weight: 700;
+                        @include mobile{
+                            display: -webkit-box;
+                            -webkit-line-clamp: 2;
+                            -webkit-box-orient: vertical;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            font-size: 2.8rem;
+                        }
+                    }
+                    .no-content{
+                        display: -webkit-box;
+                        -webkit-line-clamp: 3;
+                        -webkit-box-orient: vertical;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        font-size: 1.8rem;
+                    }
+                    .no-date{
+                        font-size: 1.8rem;
+                        @include mobile{
+                            font-size: 2.2rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
