@@ -15,10 +15,10 @@ html{
     @include mobile{
         font-size: calc(10 * 100vw / 780);
     }
-    @include mobile2{
-        font-size: calc(10 * 100vw / 570);
-    }
-    @include mobile3{
-        font-size: calc(6 * 100vw / 400);
-    }
+    // @include mobile2{
+    //     font-size: calc(10 * 100vw / 570);
+    // }
+    // @include mobile3{
+    //     font-size: calc(6 * 100vw / 400);
+    // }
 }

@@ -66,16 +66,6 @@ input, select, textarea {
     font-size: 1.2820512821vw;
   }
 }
-@media (max-width: 570px) {
-  html {
-    font-size: 1.7543859649vw;
-  }
-}
-@media (max-width: 400px) {
-  html {
-    font-size: 1.5vw;
-  }
-}
 
 .mo {
   display: none !important;
@@ -157,11 +147,11 @@ input, select, textarea {
 }
 .sc-form form.mo .form-inner input[type=text], .sc-form form.mo .form-inner select {
   height: 80px;
-  font-size: 2.2rem;
+  font-size: 2.4rem;
 }
 @media (max-width: 780px) {
   .sc-form form.mo .form-inner input[type=text], .sc-form form.mo .form-inner select {
-    height: 88px;
+    height: 44px;
   }
 }
 @media (max-width: 570px) {
@@ -174,6 +164,7 @@ input, select, textarea {
 }
 .sc-form form.mo .form-inner label {
   font-size: 2.2rem;
+  white-space: nowrap;
 }
 .sc-form form.mo .form-inner > div {
   align-items: unset;
@@ -189,13 +180,7 @@ input, select, textarea {
 }
 .sc-form form.mo .form-inner .input1 .checks_mul {
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-@media (max-width: 570px) {
-  .sc-form form.mo .form-inner .input1 .checks_mul label {
-    margin: 0;
-  }
+  align-items: center;
 }
 .sc-form form.mo .form-inner .input1 input {
   max-width: 300px;
@@ -204,6 +189,11 @@ input, select, textarea {
 @media (max-width: 570px) {
   .sc-form form.mo .form-inner .input1 input {
     max-width: 200px;
+  }
+}
+@media (max-width: 450px) {
+  .sc-form form.mo .form-inner .input1 input {
+    max-width: 140px;
   }
 }
 .sc-form form.mo .form-inner .input2, .sc-form form.mo .form-inner .input3 {
@@ -237,6 +227,11 @@ input, select, textarea {
   font-size: 2.8rem;
   margin: 0;
 }
+@media (max-width: 780px) {
+  .sc-form form.mo .form-inner .input4 a {
+    height: 44px;
+  }
+}
 @media (max-width: 570px) {
   .sc-form form.mo .form-inner .input4 a {
     max-width: 100%;
@@ -260,6 +255,11 @@ input, select, textarea {
   height: 80px;
   font-size: 2.8rem;
   margin: 0;
+}
+@media (max-width: 780px) {
+  .sc-form form.mo .form-inner .input5 a {
+    height: 44px;
+  }
 }
 @media (max-width: 570px) {
   .sc-form form.mo .form-inner .input5 a {
@@ -293,14 +293,8 @@ input, select, textarea {
   color: #666;
 }
 .sc-form form.mo .form-inner .input7 .checks_mul.sqaure input[type=radio] + label::before {
-  width: 44px;
-  height: 44px;
-}
-@media (max-width: 570px) {
-  .sc-form form.mo .form-inner .input7 .checks_mul.sqaure input[type=radio] + label::before {
-    width: 25px;
-    height: 25px;
-  }
+  width: 22px;
+  height: 22px;
 }
 .sc-form form.mo .form-inner .input7 .checks_mul.sqaure span {
   font-size: 2rem;
@@ -320,6 +314,13 @@ input, select, textarea {
   color: #fff;
   width: 100%;
   border-radius: 5px;
+}
+@media (max-width: 780px) {
+  .sc-form form.mo .form-inner .input8 a {
+    padding: 0;
+    height: 44px;
+    line-height: 44px;
+  }
 }
 .sc-form form .form-inner {
   max-width: 650px;
@@ -407,6 +408,12 @@ input, select, textarea {
   border-radius: 100%;
   border: 1px solid #BFBFBF;
   transition: background 0.3s ease, border 0.3s ease;
+}
+@media (max-width: 780px) {
+  .sc-form form .form-inner .checks_mul input[type=radio] + label::before {
+    width: 25px;
+    height: 25px;
+  }
 }
 .sc-form form .form-inner .checks_mul input[type=radio] + label::after {
   content: "";
@@ -2111,7 +2118,7 @@ section img {
     grid-template-columns: repeat(2, 1fr);
     row-gap: 28px;
     position: relative;
-    margin-bottom: 248px;
+    margin-bottom: 124px;
   }
 }
 .search_con-inner > div {
@@ -2143,7 +2150,7 @@ section img {
 @media (max-width: 780px) {
   .search_con-inner > div:nth-child(3) {
     position: absolute;
-    bottom: -110px;
+    bottom: -55px;
     margin-right: 0;
     width: 100%;
   }
@@ -2166,7 +2173,7 @@ section img {
 }
 @media (max-width: 780px) {
   .search_con-inner > div select {
-    height: 88px;
+    height: 44px;
     font-size: 2.4rem;
   }
 }
@@ -2224,7 +2231,7 @@ section img {
 @media (max-width: 780px) {
   .search_con-inner .search4 {
     position: absolute;
-    bottom: -248px;
+    bottom: -124px;
     width: 100%;
   }
 }
@@ -2241,7 +2248,7 @@ section img {
 }
 @media (max-width: 780px) {
   .search_con-inner .search4 a {
-    height: 88px;
+    height: 44px;
     font-size: 2.8rem;
   }
 }
@@ -3206,6 +3213,11 @@ form .partner-form > div select, form .partner-form > div input {
   border: 1px solid #BFBFBF;
   color: #000;
 }
+@media (max-width: 780px) {
+  form .partner-form > div select, form .partner-form > div input {
+    height: 44px;
+  }
+}
 form .partner-form > div select::placeholder, form .partner-form > div input::placeholder {
   color: #000;
 }
@@ -3285,8 +3297,8 @@ form .partner-form .input5 a {
 }
 @media (max-width: 780px) {
   form .partner-form .input5 a {
-    height: 80px;
-    font-size: 2.8rem;
+    height: 44px;
+    line-height: 44px;
   }
 }
 

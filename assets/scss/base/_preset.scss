@@ -75,9 +75,9 @@
                 padding-bottom: 66px;
                 input[type=text], select{
                     height: 80px;
-                    font-size: 2.2rem;
+                    font-size: 2.4rem;
                     @include mobile{
-                        height: 88px;
+                        height: 44px;
                     }
                     @include mobile2{
                         padding-left: 10px;
@@ -88,6 +88,7 @@
                 }
                 label{
                     font-size: 2.2rem;
+                    white-space: nowrap;
                 }
                 > div{
                     align-items: unset;
@@ -100,12 +101,12 @@
                     }
                     .checks_mul{
                         display: flex;
-                        flex-direction: column;
-                        justify-content: space-between;
+                        align-items: center;
+                        @include mobile2{
+                            // flex-direction: column;
+                            // justify-content: space-between;
+                        }
                         label{
-                            @include mobile2{
-                                margin: 0;
-                            }
                         }
                     }
                     input{
@@ -113,6 +114,9 @@
                         width: 100% !important;
                         @include mobile2{
                             max-width: 200px;
+                        }
+                        @include mobile3{
+                            max-width: 140px;
                         }
                     }
                 }
@@ -143,6 +147,9 @@
                         height: 80px;
                         font-size: 2.8rem;
                         margin: 0;
+                        @include mobile{
+                            height: 44px;
+                        }
                         @include mobile2{
                             max-width: 100%;
                         }
@@ -163,6 +170,9 @@
                         height: 80px;
                         font-size: 2.8rem;
                         margin: 0;
+                        @include mobile{
+                            height: 44px;
+                        }
                         @include mobile2{
                             max-width: calc(100% - 212px);
                         }
@@ -199,12 +209,8 @@
                         input[type=radio]{
                             & + label{
                                 &::before{
-                                    width: 44px;
-                                    height: 44px;
-                                    @include mobile2{
-                                        width: 25px;
-                                        height: 25px;
-                                    }
+                                    width: 22px;
+                                    height: 22px;
                                 }
                             }
                         }
@@ -227,6 +233,11 @@
                         color: $white;
                         width: 100%;
                         border-radius: 5px;
+                        @include mobile{
+                            padding: 0;
+                            height: 44px;
+                            line-height: 44px;
+                        }
                     }
                 }
             }
@@ -324,6 +335,10 @@
                             border-radius: 100%;
                             border: 1px solid #BFBFBF;
                             transition: background 0.3s ease, border 0.3s ease;
+                            @include mobile{
+                                width: 25px;
+                                height: 25px;
+                            }
                         }
 
                         &::after {

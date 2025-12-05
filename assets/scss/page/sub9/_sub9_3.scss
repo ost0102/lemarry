@@ -23,6 +23,9 @@ form{
                 height: 60px;
                 border: 1px solid #BFBFBF;
                 color: #000;
+                @include mobile{
+                    height: 44px;
+                }
                 &::placeholder{
                     color: #000;
                 }
@@ -105,8 +108,8 @@ form{
                 border-radius: 5px;
                 line-height: 80px;
                 @include mobile{
-                    height: 80px;
-                    font-size: 2.8rem;
+                    height: 44px;
+                    line-height: 44px;
                 }
             }
         }
