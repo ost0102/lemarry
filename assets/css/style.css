@@ -348,7 +348,7 @@ input, select, textarea {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  background: url(/assets/images/icn1.png) no-repeat 93% 50%;
+  background: url("../../images/icn1.png") no-repeat 93% 50%;
 }
 .sc-form form .form-inner label {
   font-size: 1.6rem;
@@ -2570,7 +2570,7 @@ section img {
   position: relative;
 }
 .ev-list--cont li a .ev-img.ing div {
-  background: url("/assets/images/event-ing.png") no-repeat 0% 0%;
+  background: url("../../../images/icn1.png") no-repeat 0% 0%;
   width: 78px;
   height: 47px;
   position: absolute;
@@ -2578,7 +2578,7 @@ section img {
   left: 0;
 }
 .ev-list--cont li a .ev-img.close div {
-  background: url("/assets/images/event-close.png") no-repeat 0% 0%;
+  background: url("../../../images/event-close.png") no-repeat 0% 0%;
   width: 78px;
   height: 47px;
   position: absolute;
