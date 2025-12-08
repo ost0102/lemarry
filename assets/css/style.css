@@ -2394,7 +2394,7 @@ section img {
   position: relative;
 }
 .ev-list--cont li a .ev-img.ing div {
-  background: url("/assets/images/event-ing.png") no-repeat 0% 0%;
+  background: url(../../assets/images/event-ing.png) no-repeat 0% 0%;
   width: 78px;
   height: 47px;
   position: absolute;
@@ -2402,7 +2402,7 @@ section img {
   left: 0;
 }
 .ev-list--cont li a .ev-img.close div {
-  background: url("/assets/images/event-close.png") no-repeat 0% 0%;
+  background: url(../../assets/images/event-close.png) no-repeat 0% 0%;
   width: 78px;
   height: 47px;
   position: absolute;
@@ -2570,7 +2570,7 @@ section img {
   position: relative;
 }
 .ev-list--cont li a .ev-img.ing div {
-  background: url("../../../images/icn1.png") no-repeat 0% 0%;
+  background: url(../../assets/images/event-ing.png) no-repeat 0% 0%;
   width: 78px;
   height: 47px;
   position: absolute;
@@ -2578,7 +2578,7 @@ section img {
   left: 0;
 }
 .ev-list--cont li a .ev-img.close div {
-  background: url("../../../images/event-close.png") no-repeat 0% 0%;
+  background: url(../../assets/images/event-close.png) no-repeat 0% 0%;
   width: 78px;
   height: 47px;
   position: absolute;
