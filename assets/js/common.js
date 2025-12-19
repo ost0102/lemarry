@@ -1,36 +1,23 @@
 document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll("form").forEach(form => {
 
-    const nameInput = document.querySelector('input[name="name"]');
-    if (nameInput) {
-        nameInput.addEventListener("input", () => {
-            nameInput.value = nameInput.value.replace(/[0-9]/g, "");
-        });
-    }
+        const agreeAll = form.querySelector('[data-role="agree-all"]');
+        const agreeItems = form.querySelectorAll('[data-role="agree-item"]');
 
-    const phoneInput = document.querySelector('input[name="phone"]');
-    if (phoneInput) {
-        phoneInput.addEventListener("input", () => {
-            phoneInput.value = phoneInput.value.replace(/[^0-9]/g, "");
-        });
-    }
+        if (!agreeAll || !agreeItems.length) return;
 
-    const agreeAll = document.getElementById("agree-all");
-    const detailChecks = document.querySelectorAll(".chk_cont.et input[type='checkbox']");
-
-    if (agreeAll && detailChecks.length) {
-        const updateAgreeAll = () => {
-            const allChecked = Array.from(detailChecks).every((checkbox) => checkbox.checked);
-            agreeAll.checked = allChecked;
-        };
-
+        // 전체동의 클릭
         agreeAll.addEventListener("change", () => {
-            detailChecks.forEach((checkbox) => {
-                checkbox.checked = agreeAll.checked;
+            agreeItems.forEach(chk => {
+                chk.checked = agreeAll.checked;
             });
         });
 
-        detailChecks.forEach((checkbox) => {
-            checkbox.addEventListener("change", updateAgreeAll);
+        // 개별 동의 클릭
+        agreeItems.forEach(chk => {
+            chk.addEventListener("change", () => {
+                agreeAll.checked = [...agreeItems].every(c => c.checked);
+            });
         });
-    }
+    });
 });

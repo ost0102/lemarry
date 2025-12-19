@@ -206,7 +206,8 @@
                             font-size: 2rem;
                             color: #666;
                         }
-                        input[type=radio]{
+                        input[type=radio],
+                        input[type=checkbox]{
                             & + label{
                                 &::before{
                                     width: 22px;
@@ -243,19 +244,19 @@
             }
         }
         .form-inner {
-            max-width: 650px;
+            max-width: 65rem;
             width: 100%;
             margin: 0 auto;
             padding-bottom: 378px;
             > div {
                 display: flex;
                 align-items: center;
-                margin-bottom: 20px;
+                margin-bottom: 2rem;
             }
 
             input[type="text"], select {
-                height: 60px;
-                padding-left: 20px;
+                height: 6rem;
+                padding-left: 2rem;
                 font-size: 1.6rem;
                 color: $black;
                 border: 1px solid #BFBFBF;
@@ -284,15 +285,16 @@
                 font-size: 1.6rem;
                 font-weight: 600;
                 width: 152px;
-                height: 60px;
+                height: 6rem;
                 background: $m-color;
                 color: $white;
-                text-shadow: 0px 3px 5px #888;
+                text-shadow: 0px 2px 0px #9999;
             }
             .checks_mul {
                 position: relative;
                 &.sqaure{
-                    input[type="radio"]{
+                    input[type=radio],
+                    input[type=checkbox]{
                         & + label {
                             &::before {
                                 border-radius: unset;
@@ -303,7 +305,8 @@
                 label:last-child{
                     margin-right: 0 !important;
                 }
-                input[type="radio"] {
+                input[type=radio],
+                input[type=checkbox] {
                     position: absolute;
                     width: 1px;
                     height: 1px;
@@ -418,6 +421,7 @@
                     display: flex;
                     align-items: center;
                     justify-content: space-between;
+                    width: 100%;
                     label{
                         display: flex !important;
                         align-items: center;
@@ -667,6 +671,106 @@ span.page-bar{
         }
         .futp{
             font-weight: 400;
+        }
+    }
+}
+
+.--cterm{
+    padding-top: 10rem;
+    padding-bottom: 18rem;
+}
+
+.layer_zone{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.7);
+    z-index: 10000;
+    overflow-y: auto;
+    &.active{
+        display: block;
+    }
+    .layer-wrap{
+        padding: 20px;
+        max-width: 1000px;
+        width: 100%;
+        margin: 0 auto;
+        .layer-inner{
+            position: relative;
+            width: 100%;
+            margin: 0 auto;
+            background: #fff;
+            padding: 30px 0;
+            .sc-form{
+                form{
+                    .form-inner{
+                        max-width: unset;
+                        width: max-content;
+                    }
+                    &.mo{
+                        .form-inner{
+                            max-width: 612px;
+                            width: 100%;
+                            padding: 0 20px;
+                            .input8{
+                                padding-top: 4.5rem;
+                            }
+                        }
+                    }
+                }
+            }
+            .close{
+                position: absolute;
+                top: 2.7rem;
+                right: 2.7rem;
+                width: 3.8rem;
+            }
+            .layer-tit{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 1.6rem;
+                margin-bottom: 2.4rem;
+                text-align: center;
+                @include mobile{
+                    font-size: 18px;
+                }
+                span{
+                    font-size: 3.6rem;
+                    font-weight: 500;
+                }
+            }
+            .layer-sub{
+                font-size: 1.8rem;
+                font-weight: 300;
+                margin-top: 2.1rem;
+                text-align: center;
+            }
+            span.line{
+                display: block;
+                max-width: 80rem;
+                margin: 0 auto;
+                width: 100%;
+                height: 2px;
+                background: #e5c095;
+                margin-top: 5.7rem;
+                margin-bottom: 5rem;
+            }
+            .sc-form{
+                padding-top: 0;
+                form{
+                    .form-inner{
+                        .input9{
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+            }
         }
     }
 }
